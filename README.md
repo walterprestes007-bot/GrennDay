@@ -4,7 +4,7 @@ Plataforma de monitoramento agrícola inteligente: sensores IoT (ESP32), previs�
 tempo, alertas e irrigação automatizada.
 
 ## Stack
-- Java 17 + Spring Boot 3.3
+- Java 21 + Spring Boot 3.3
 - Spring Security + JWT
 - Spring Data JPA (H2 em dev / PostgreSQL em produção)
 - Thymeleaf (páginas server-side)
