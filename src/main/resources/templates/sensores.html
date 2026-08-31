@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GreenDay - Sensores</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+<nav th:replace="~{fragments/nav :: nav}"></nav>
+<main class="container">
+    <h1>Sensores e dispositivos</h1>
+    <button id="btn-novo-sensor">+ Novo sensor</button>
+    <div id="lista-sensores" class="cards-grid"></div>
+</main>
+<script th:src="@{/js/sensores.js}"></script>
+</body>
+</html>

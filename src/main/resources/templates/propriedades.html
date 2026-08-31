@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GreenDay - Propriedades</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+<nav th:replace="~{fragments/nav :: nav}"></nav>
+<main class="container">
+    <h1>Minhas propriedades</h1>
+    <button id="btn-nova-propriedade">+ Nova propriedade</button>
+    <div id="lista-propriedades" class="cards-grid"></div>
+</main>
+<script th:src="@{/js/propriedades.js}"></script>
+</body>
+</html>

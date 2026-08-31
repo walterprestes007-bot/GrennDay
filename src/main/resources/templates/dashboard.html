@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GreenDay - Painel</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+<nav th:replace="~{fragments/nav :: nav}"></nav>
+<main class="container">
+    <h1>Painel da propriedade</h1>
+    <section id="cards-resumo" class="cards-grid"></section>
+    <section>
+        <h2>Alertas recentes</h2>
+        <ul id="lista-alertas"></ul>
+    </section>
+</main>
+<script th:src="@{/js/dashboard.js}"></script>
+</body>
+</html>
