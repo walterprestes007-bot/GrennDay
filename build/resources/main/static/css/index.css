@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+/* =========================
+   PÁGINA
+========================= */
+
+.login-page {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* =========================
+   FUNDO
+========================= */
+
+.background {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+            linear-gradient(
+                    rgba(34, 70, 30, 0.48),
+                    rgba(39, 83, 38, 0.60)
+            ),
+            url("/images/vacas.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    filter: saturate(1.1);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.login-container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 500px;
+
+    padding: 30px 20px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    width: 90px;
+    margin: 0 auto 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 17px;
+
+    color: white;
+
+    text-shadow:
+            0 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+.logo span:first-child {
+    letter-spacing: 1px;
+}
+
+.logo span:last-child {
+    letter-spacing: 2px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.login-card {
+    width: 100%;
+
+    padding: 42px 34px 32px;
+
+    border-radius: 18px;
+
+    background: rgba(239, 246, 231, 0.96);
+
+    box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.30);
+
+    backdrop-filter: blur(8px);
+}
+
+/* =========================
+   TÍTULO
+========================= */
+
+.login-card h1 {
+    color: #315b16;
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #6b765f;
+
+    font-size: 14px;
+
+    margin-bottom: 28px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+
+    color: #36551f;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.input-group input {
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 16px;
+
+    border: 1.5px solid #9bb37c;
+
+    border-radius: 9px;
+
+    background: #f5f7f2;
+
+    color: #27351d;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+.input-group input::placeholder {
+    color: #92988d;
+}
+
+.input-group input:focus {
+    border-color: #4d7c27;
+
+    box-shadow:
+            0 0 0 3px rgba(77, 124, 39, 0.14);
+
+    background: white;
+}
+
+/* =========================
+   ESQUECI SENHA
+========================= */
+
+.forgot-password {
+    text-align: right;
+
+    margin-top: -5px;
+
+    margin-bottom: 22px;
+}
+
+.forgot-password a {
+    color: #36551f;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    color: #6c9c35;
+
+    text-decoration: underline;
+}
+
+/* =========================
+   BOTÃO ENTRAR
+========================= */
+
+.btn-login {
+    width: 100%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: linear-gradient(
+            135deg,
+            #477c20,
+            #315f18
+    );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+            0 7px 16px rgba(49, 95, 24, 0.25);
+
+    transition: 0.25s;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(
+            135deg,
+            #578d2a,
+            #3c701e
+    );
+
+    box-shadow:
+            0 10px 20px rgba(49, 95, 24, 0.35);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+/* =========================
+   DIVISOR
+========================= */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 25px 0 20px;
+
+    color: #8a9580;
+
+    font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #ccd5c4;
+}
+
+/* =========================
+   BOTÕES SOCIAIS
+========================= */
+
+.social-button {
+    width: 100%;
+
+    height: 48px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #d8ded2;
+
+    border-radius: 9px;
+
+    background: white;
+
+    color: #3d433a;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: 0.2s;
+}
+
+.social-button:hover {
+    background: #f4f8f0;
+
+    border-color: #a9bd94;
+
+    transform: translateY(-1px);
+}
+
+/* =========================
+   ÍCONE GOOGLE
+========================= */
+
+.google-icon {
+    font-size: 19px;
+
+    font-weight: bold;
+
+    color: #4285f4;
+}
+
+/* =========================
+   ÍCONE TELEFONE
+========================= */
+
+.phone-icon {
+    font-size: 18px;
+
+    color: #3e4b39;
+}
+
+/* =========================
+   CADASTRO
+========================= */
+
+.register-text {
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #70786a;
+
+    font-size: 13px;
+}
+
+.register-text a {
+    color: #3f701d;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 600px) {
+
+    .login-container {
+        padding: 20px 15px;
+    }
+
+    .login-card {
+        padding: 32px 22px 25px;
+
+        border-radius: 15px;
+    }
+
+    .login-card h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-height: 700px) {
+
+    .login-card {
+        padding-top: 25px;
+        padding-bottom: 22px;
+    }
+
+    .logo {
+        margin-bottom: 5px;
+    }
+}
+/* =========================
+   FOLHAS DECORATIVAS
+========================= */
+
+.leaves {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+.leaf {
+    position: absolute;
+
+    font-size: 45px;
+
+    opacity: 0.55;
+
+    filter: blur(0.2px);
+
+    animation: floatingLeaf 6s ease-in-out infinite;
+}
+
+/* posições */
+
+.leaf-1 {
+    top: 8%;
+    left: 8%;
+    font-size: 50px;
+    transform: rotate(-25deg);
+}
+
+.leaf-2 {
+    top: 18%;
+    right: 8%;
+    font-size: 60px;
+    transform: rotate(25deg);
+
+    animation-delay: 1s;
+}
+
+.leaf-3 {
+    bottom: 15%;
+    left: 6%;
+    font-size: 55px;
+    transform: rotate(35deg);
+
+    animation-delay: 2s;
+}
+
+.leaf-4 {
+    bottom: 8%;
+    right: 10%;
+    font-size: 48px;
+    transform: rotate(-20deg);
+
+    animation-delay: 3s;
+}
+
+.leaf-5 {
+    top: 45%;
+    left: 2%;
+    font-size: 35px;
+    transform: rotate(-45deg);
+
+    animation-delay: 1.5s;
+}
+
+.leaf-6 {
+    top: 55%;
+    right: 3%;
+    font-size: 40px;
+    transform: rotate(30deg);
+
+    animation-delay: 2.5s;
+}
+
+.leaf-7 {
+    bottom: 30%;
+    left: 15%;
+    font-size: 28px;
+    transform: rotate(70deg);
+
+    animation-delay: 4s;
+}
+
+.leaf-8 {
+    top: 10%;
+    right: 22%;
+    font-size: 30px;
+    transform: rotate(-35deg);
+
+    animation-delay: 2s;
+}
+
+
+/* movimento suave */
+
+@keyframes floatingLeaf {
+
+    0% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -10px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+/* =========================
+   FOLHAS DO CARD
+========================= */
+
+.login-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container */
+
+.card-leaves {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+/* Folhas */
+
+.leaf-svg {
+    position: absolute;
+
+    fill: #4f7628;
+
+    opacity: 0.13;
+
+    width: 90px;
+    height: 90px;
+
+    animation: leafFloat 6s ease-in-out infinite;
+}
+
+/* Linha central da folha */
+
+.leaf-svg .leaf-line {
+    fill: none;
+
+    stroke: #355d19;
+
+    stroke-width: 2;
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   POSIÇÕES
+========================= */
+
+/* Canto superior direito */
+
+.leaf-top-right {
+    top: -25px;
+    right: -20px;
+
+    width: 105px;
+    height: 105px;
+
+    transform: rotate(20deg);
+}
+
+
+/* Lado esquerdo */
+
+.leaf-left {
+    top: 95px;
+    left: -45px;
+
+    width: 90px;
+    height: 90px;
+
+    transform: rotate(-25deg);
+
+    animation-delay: 1s;
+}
+
+
+/* Canto inferior direito */
+
+.leaf-bottom-right {
+    right: -25px;
+    bottom: 35px;
+
+    width: 100px;
+    height: 100px;
+
+    transform: rotate(65deg);
+
+    animation-delay: 2s;
+}
+
+
+/* Canto inferior esquerdo */
+
+.leaf-bottom-left {
+    left: -20px;
+    bottom: -25px;
+
+    width: 90px;
+    height: 90px;
+
+    transform: rotate(-20deg);
+
+    animation-delay: 3s;
+}
+
+
+/* =========================
+   ANIMAÇÃO
+========================= */
+
+@keyframes leafFloat {
+
+    0% {
+        transform: translateY(0) rotate(20deg);
+    }
+
+    50% {
+        transform: translateY(-6px) rotate(24deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(20deg);
+    }
+}
+
+
+/* =========================
+   CONTEÚDO NA FRENTE
+========================= */
+
+.login-card h1,
+.login-card .subtitle,
+.login-card form,
+.login-card .divider,
+.login-card .social-button,
+.login-card .register-text {
+    position: relative;
+    z-index: 2;
+}

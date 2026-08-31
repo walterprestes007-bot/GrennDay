@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GreenDay - Culturas</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+<nav th:replace="~{fragments/nav :: nav}"></nav>
+<main class="container">
+    <h1>Culturas cultivadas</h1>
+    <button id="btn-nova-cultura">+ Nova cultura</button>
+    <table id="tabela-culturas">
+        <thead>
+        <tr><th>Nome</th><th>Variedade</th><th>Plantio</th><th>Previsao colheita</th><th>Area (ha)</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</main>
+<script th:src="@{/js/culturas.js}"></script>
+</body>
+</html>
